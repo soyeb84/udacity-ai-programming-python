@@ -1,0 +1,75 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = resnet 
+ dogfile = dognames.txt
+{'Cat_01.jpg': ['cat'], 'Dog_02.jpg': ['dog'], 'Dog_01.jpg': ['dog'], 'Car_01.jpg': ['car']}
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Cat_01.jpg  label:                        cat
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:                     Dog_01.jpg  label:                        dog
+ 4 key:                     Car_01.jpg  label:                        car
+uploaded_images/Cat_01.jpg
+uploaded_images/Dog_02.jpg
+uploaded_images/Dog_01.jpg
+uploaded_images/Car_01.jpg
+
+     MATCH:
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:          tabby, tabby cat, cat
+
+                    Car_01.jpg: 
+Real:                        car   Classifier:          sports car, sport car
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: english springer, english springer spaniel
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: english springer, english springer spaniel
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                    Cat_01.jpg: 
+Real:                        cat   Classifier:          tabby, tabby cat, cat  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                    Car_01.jpg: 
+Real:                        car   Classifier:          sports car, sport car  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: english springer, english springer spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier: english springer, english springer spaniel  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog: 100.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+Model used for classification resnet
+Number of images : 4
+Number of dog images : 2
+Number of not-a dog images : 2
+% Correct dogs: 100.0%
+% Correct breed: 0%
+% Correct not-a dog: 100.0%
+Misclassified breed - pet label dog, classifier label english springer, english springer spaniel
+Misclassified breed - pet label dog, classifier label english springer, english springer spaniel
+
+** Total Elapsed Runtime: 0:0:0
