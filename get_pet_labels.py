@@ -45,10 +45,11 @@ def get_pet_labels(image_dir):
     results_dic = {}
     
     for filename in filename_list:
-        if filename not in results_dic:
-            results_dic[filename] = []
-            
-        results_dic[filename].append(get_label_from_filename(filename))
+        if not filename.startswith("."):
+            if filename not in results_dic:
+                results_dic[filename] = []
+                
+            results_dic[filename].append(get_label_from_filename(filename))
     # Replace None with the results_dic dictionary that you created with this
     # function
     return results_dic
